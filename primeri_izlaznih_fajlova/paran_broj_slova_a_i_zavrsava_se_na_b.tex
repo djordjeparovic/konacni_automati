@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage[margin=1in,footskip=0.25in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+\begin{document}\section{Prvi automat}\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto]
+	\node[state,initial, accepting] (0)   {$0$};
+	\node[state](1) [right=of 0] {$1$};
+	 \path[->]
+(0)edge [loop above] node [swap] {b} ()
+(0)edge [bend right] node [swap] {a} (1)
+(1)edge [loop above] node [swap] {b} ()
+(1)edge [bend right] node [swap] {a} (0);
+\end{tikzpicture}\section{Drugi automat}\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto]
+	\node[state,initial] (0)   {$0$};
+	\node[state,accepting](1) [right=of 0] {$1$};
+	 \path[->]
+(0)edge [loop above] node [swap] {a} ()
+(0)edge [bend right] node [swap] {b} (1)
+(1)edge [bend right] node [swap] {a} (0)
+(1)edge [loop above] node [swap] {b} ();
+\end{tikzpicture}\section{Presek automata}\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto]
+	\node[state,initial] (0)   {$0$};
+	\node[state,accepting](1) [right=of 0] {$1$};
+	\node[state](2) [right=of 1] {$2$};
+	 \path[->]
+(0)edge [bend right] node [swap] {a} (2)
+(0)edge [bend right] node [swap] {b} (1)
+(1)edge [bend right] node [swap] {a} (2)
+(1)edge [loop above] node [swap] {b} ()
+(2)edge [bend right] node [swap] {a} (0)
+(2)edge [loop above] node [swap] {b} ();
+\end{tikzpicture}\section{Unija automata}\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto]
+	\node[state,initial, accepting] (0)   {$0$};
+	\node[state](1) [right=of 0] {$1$};
+	\node[state,accepting](2) [right=of 1] {$2$};
+	 \path[->]
+(0)edge [bend right] node [swap] {a} (1)
+(0)edge [loop above] node [swap] {b} ()
+(1)edge [bend right] node [swap] {a} (0)
+(1)edge [bend right] node [swap] {b} (2)
+(2)edge [bend right] node [swap] {a} (0)
+(2)edge [loop above] node [swap] {b} ();
+\end{tikzpicture}\section{Razlika automata A/B}\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto]
+	\node[state,initial, accepting] (0)   {$0$};
+	\node[state](1) [right=of 0] {$1$};
+	\node[state](2) [right=of 1] {$2$};
+	 \path[->]
+(0)edge [bend right] node [swap] {a} (2)
+(0)edge [bend right] node [swap] {b} (1)
+(1)edge [bend right] node [swap] {a} (2)
+(1)edge [loop above] node [swap] {b} ()
+(2)edge [bend right] node [swap] {a} (0)
+(2)edge [loop above] node [swap] {b} ();
+\end{tikzpicture}\section{Razlika automata B/A}\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto]
+	\node[state,initial] (0)   {$0$};
+	\node[state](1) [right=of 0] {$1$};
+	\node[state,accepting](2) [right=of 1] {$2$};
+	 \path[->]
+(0)edge [bend right] node [swap] {a} (1)
+(0)edge [loop above] node [swap] {b} ()
+(1)edge [bend right] node [swap] {a} (0)
+(1)edge [bend right] node [swap] {b} (2)
+(2)edge [bend right] node [swap] {a} (0)
+(2)edge [loop above] node [swap] {b} ();
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,20 @@
+# Fajl sadrzi opis deterministickog automata
+# azbuka automata
+a, b
+# stanja automata
+0, 1, 2, 3, 4, 5
+# poceteno stanje automata
+0
+# zavrsana stanja automata
+3, 4, 5
+# prelazi automata
+0 a 1
+0 b 2
+1 a 1
+1 b 3
+2 a 1
+2 b 2
+3 b 4
+3 a 5
+4 a 1
+4 b 2

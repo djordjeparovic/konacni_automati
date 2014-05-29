@@ -1,0 +1,14 @@
+# Fajl sadrzi opis automata koji prepoznaje reci koje se zavrsavaju na b. 
+# azbuka automata
+a, b
+# stanja automata
+0, 1
+# poceteno stanje automata
+0
+# zavrsana stanja automata
+1
+# prelazi automata
+0 a 0
+0 b 1
+1 a 0
+1 b 1

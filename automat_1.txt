@@ -1,0 +1,16 @@
+# Fajl sadrzi opis automata (1)
+# azbuka automata
+a, b
+# stanja automata
+0, 1, 2
+# poceteno stanje automata
+0
+# zavrsana stanja automata
+1, 2
+# prelazi automata
+0 a 1
+0 b 2
+1 b 2
+2 b 2
+
+

@@ -1,0 +1,16 @@
+Za data dva automata skript, u .tex fajl, ispisuje minimalizovane te automate, kao i 
+njhov presek, uniju i razliku. 
+Argumenti skripta su tekstuelne datoteke koje sadrze opise ulaznih automata. 
+
+Primeri poziva skripta:
+
+./skript.py automat_1.txt automat_2.txt
+
+./skript.py automat_paran_broj_slova_a.txt automat_reci_se_zavrsavaju_na_b.txt 
+
+Rezultat se ispisuje u izlazni_fajl.tex fajl u tekucem direktorijumu. 
+
+Dobijeni .tex fajl zahteva tikz biblioteku da bi se kompajlirao, 
+moguce je online kompajlirati na sajtu:
+http://latex.informatik.uni-halle.de/latex-online/latex.php
+dobija se .pdf fajl sa crtezima automata.

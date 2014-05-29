@@ -1,0 +1,15 @@
+# Fajl sadrzi opis automata koji prepoznaje reci sa parnim brojem
+#slova a.
+# azbuka automata
+a, b
+# stanja automata
+0, 1
+# poceteno stanje automata
+0
+# zavrsana stanja automata
+0
+# prelazi automata
+0 b 0
+0 a 1
+1 b 1
+1 a 0
