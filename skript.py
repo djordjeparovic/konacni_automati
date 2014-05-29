@@ -1,5 +1,4 @@
 #!/usr/bin/python
-# python skript za seminarski iz Leksicke analize
 
 import sys, re, itertools
 from itertools import groupby
